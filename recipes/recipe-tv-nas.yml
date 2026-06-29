@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
+name: verdigris-tv-nas
+description: TV + NAS setup with ZFS
+
+base-image: ghcr.io/blue-build/base-images/fedora-kinoite
+image-version: 44
+
+platforms:
+  - linux/amd64
+
+modules:
+  - from-file: common/zfs-modules.yml
+  - type: initramfs
+  - type: signing

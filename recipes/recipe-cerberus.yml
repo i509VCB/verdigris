@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+
+name: verdigris-cerberus
+description: Cerberus
+
+base-image: quay.io/fedora-ostree-desktops/base-atomic
+image-version: 44
+
+platforms:
+  - linux/amd64
+  - linux/arm64
+
+modules:
+  - from-file: common/common-modules.yml
+  - from-file: common/sddm-modules.yml
+  - type: initramfs
+  - type: signing
