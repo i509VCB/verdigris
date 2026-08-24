@@ -1,0 +1,119 @@
+{
+  "policies": {
+    "AIChatbot": {
+      "Providers": {
+        "Builtin": {
+          "Anthropic Claude": false,
+          "ChatGPT": false,
+          "Copilot": false,
+          "Google Gemini": false,
+          "HuggingChat": false,
+          "Le Chat Mistral": false,
+          "localhost": false
+        }
+      }
+    },
+
+    "AIControls": {
+      "Default": {
+        "Value": "blocked",
+        "Locked": true
+      },
+      "Translations": {
+        "Value": "blocked",
+        "Locked": false
+      }
+    },
+
+    "DisableBuiltinPDFViewer": true,
+    "DisableFirefoxAccounts": true,
+    "DisableFirefoxStudies": true,
+    "DisablePocket": true,
+    "DisableTelemetry": true,
+
+    "EnableTrackingProtection": {
+      "Value": true,
+      "Locked": true,
+      "Cryptomining": true,
+      "Fingerprinting": true,
+      "EmailTracking": true,
+      "SuspectedFingerprinting": true,
+      "Category": "strict",
+      "Exceptions": [],
+      "BaselineExceptions": true,
+      "ConvenienceExceptions": true
+    },
+
+    "EncryptedMediaExtensions": {
+      "Enabled": true,
+      "Locked": true
+    },
+
+    "ExtensionSettings": {
+      "uBlock0@raymondhill.net": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"
+      },
+      "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/violentmonkey/latest.xpi"
+      }
+    },
+
+    "FirefoxHome": {
+      "Search": true,
+      "TopSites": false,
+      "SponsoredTopSites": false,
+      "Highlights": false,
+      "Pocket": false,
+      "Stories": false,
+      "SponsoredPocket": false,
+      "SponsoredStories": false,
+      "Snippets": false,
+      "Locked": false
+    },
+
+    "FirefoxSuggest": {
+      "WebSuggestions": true,
+      "SponsoredSuggestions": false,
+      "ImproveSuggest": false,
+      "Locked": false
+    },
+
+    "GenerativeAI": {
+      "Enabled": false,
+      "Chatbot": false,
+      "LinkPreviews": false,
+      "TabGroups": false,
+      "Locked": false
+    },
+
+    "PDFjs": {
+      "Enabled": false,
+      "EnablePermissions": false
+    },
+
+    "Preferences": {},
+
+    "SearchEngines": {
+      "Default": "DuckDuckGo",
+      "PreventInstalls": true
+    },
+
+    "SkipTermsOfUse": true,
+
+    "Sync": {
+      "Enabled": false
+    },
+
+    "UserMessaging": {
+      "ExtensionRecommendations": false,
+      "FeatureRecommendations": false,
+      "UrlbarInterventions": false,
+      "SkipOnboarding": true,
+      "MoreFromMozilla": true,
+      "FirefoxLabs": false,
+      "Locked": false
+    }
+  }
+}

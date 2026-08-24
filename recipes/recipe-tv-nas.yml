@@ -3,13 +3,23 @@
 name: verdigris-tv-nas
 description: TV + NAS setup with ZFS
 
-base-image: ghcr.io/blue-build/base-images/fedora-kinoite
+base-image: quay.io/fedora-ostree-desktops/base-atomic
 image-version: 44
 
 platforms:
   - linux/amd64
 
 modules:
+  - from-file: common/common-packages.yml
   - from-file: common/zfs-modules.yml
+  - from-file: common/kde.yml
+  - from-file: common/firefox-policy.yml
+  - from-file: common/yubico-auth.yml
+  - type: os-release
+    properties:
+      ID: verdigris-tv-nas
+      ID_LIKE: fedora
+      NAME: Verdigris
+      PRETTY_NAME: Verdigris TV NAS
   - type: initramfs
   - type: signing

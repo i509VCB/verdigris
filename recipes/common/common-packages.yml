@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
+modules:
+  # System packages we will always need
+  - type: dnf
+    install:
+      install-weak-deps: false
+      packages:
+        # Local network discovery
+        - avahi
+        - distrobox
+        # core dumps for ABRT
+        - gdb
+        - git
+
+  - type: systemd
+    system:
+      enabled:
+        - avahi-daemon.service

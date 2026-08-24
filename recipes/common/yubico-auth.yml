@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
+modules:
+  # pcsc daemon must be installed on host system
+  - type: dnf
+    install:
+      install-weak-deps: false
+      packages:
+        - pcsc-lite
+
+  - type: systemd
+    system:
+      enabled:
+        - pcscd.service
+
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        repo:
+          title: Flathub (system)
+        install:
+          - com.yubico.yubioath

@@ -11,7 +11,15 @@ platforms:
   - linux/arm64
 
 modules:
-  - from-file: common/common-modules.yml
-  - from-file: common/sddm-modules.yml
+  - from-file: common/common-packages.yml
+  - from-file: common/kde.yml
+  - from-file: common/firefox-policy.yml
+  - from-file: common/yubico-auth.yml
+  - type: os-release
+    properties:
+      ID: verdigris-cerberus
+      ID_LIKE: fedora
+      NAME: Verdigris
+      PRETTY_NAME: Verdigris Cerberus
   - type: initramfs
   - type: signing

@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-stage-list-v1.json
+
+modules:
+  - type: dnf
+    # Install minimum functional KDE desktop
+    #
+    # This is a lot less bloated than the traditional "kde-desktop-environment" group.
+    group-install:
+      packages:
+      - kde-desktop
+
+      exclude:
+        # ostree means PackageKit is not needed.
+        - plasma-discover-packagekit
+        - PackageKit
+        - PackageKit-command-not-found
+        # Exclude krfb since it does not work well.
+        - krfb
+
+  - type: default-flatpaks
+    configurations:
+      - scope: system
+        repo:
+          title: Flathub (system)
+        install:
+          - org.kde.elisa
+          - org.kde.kamoso
+          - org.kde.kcalc
