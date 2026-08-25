@@ -46,4 +46,6 @@ jobs:
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
+          # Because we load the MOK from secrets, we do not want to replace it by checking out again.
+          skip_checkout: true
           maximize_build_space: true
