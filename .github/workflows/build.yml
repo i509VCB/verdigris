@@ -29,17 +29,15 @@ jobs:
           - recipe-cerberus.yml
           - recipe-tv-nas.yml
     steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+
       - name: Extract kernel key
         shell: bash
         env:
           KERNEL_SIGNING_SECRET: ${{ secrets.KERNEL_SIGNING_SECRET }}
         run: echo "${KERNEL_SIGNING_SECRET}" | base64 -d > MOK.priv
-
-      - name: Build debugging...
-        run: |
-          pwd
-          ls -la
-          ls -la MOK.priv
 
       - name: Build Custom Image
         uses: blue-build/github-action@v1.12
