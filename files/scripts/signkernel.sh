@@ -15,7 +15,10 @@
 
 set -oue pipefail
 
-KERNEL_VERSION="$(rpm -q "kernel-longterm" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
+# Some builds use a longterm kernel while others use a new kernel
+KERNEL_PACKAGE="kernel-longterm"
+rpm -q "$KERNEL_PACKAGE" &>/dev/null || KERNEL_PACKAGE="kernel"
+KERNEL_VERSION="$(rpm -q "$KERNEL_PACKAGE" --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}')"
 
 PUBLIC_KEY_CRT_PATH="/tmp/certs/public_key.crt"
 PRIVATE_KEY_PATH="/tmp/certs/private_key.priv"
