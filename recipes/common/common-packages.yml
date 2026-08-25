@@ -12,6 +12,8 @@ modules:
         # core dumps for ABRT
         - gdb
         - git
+        # signing kernel/modules
+        - sbsigntools
 
   - type: systemd
     system:

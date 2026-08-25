@@ -1,5 +1,6 @@
 cosign.key
 cosign.private
+MOK.priv
 /Containerfile
 /.bluebuild-scripts_*
 *.iso

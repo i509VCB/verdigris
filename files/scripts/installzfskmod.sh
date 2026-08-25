@@ -92,8 +92,7 @@ echo "Install zfs rpms"
 dnf install -y --setopt=install_weak_deps=False ./*.rpm
 cd ..
 
-# FIXME: Figure out signing
-# ./signmodules.sh "zfs"
+./signmodules.sh "zfs"
 
 echo '
 

@@ -21,5 +21,4 @@ modules:
       ID_LIKE: fedora
       NAME: Verdigris
       PRETTY_NAME: Verdigris TV NAS
-  - type: initramfs
-  - type: signing
+  - from-file: common/post-build.yml
