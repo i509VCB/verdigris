@@ -12,7 +12,7 @@ modules:
     secrets:
       - type: file
         source: ./MOK.priv
-        mount: 
+        mount:
           type: file
           destination: /tmp/certs/private_key.priv
     scripts:
