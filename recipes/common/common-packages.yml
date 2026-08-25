@@ -8,6 +8,8 @@ modules:
       packages:
         # Local network discovery
         - avahi
+        # Allow TPM to unlock from LUKs
+        - clevis
         - distrobox
         # core dumps for ABRT
         - gdb
