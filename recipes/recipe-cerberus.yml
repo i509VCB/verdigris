@@ -14,7 +14,7 @@ modules:
   - from-file: common/common-packages.yml
   - from-file: common/kde.yml
   - from-file: common/firefox-policy.yml
-  - from-file: common/yubico-auth.yml
+  - from-file: common/auth.yml
   - type: os-release
     properties:
       ID: verdigris-cerberus

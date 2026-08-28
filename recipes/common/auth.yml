@@ -20,3 +20,9 @@ modules:
           title: Flathub (system)
         install:
           - com.yubico.yubioath
+
+  # Install keepassxc using dnf for browser plugin support
+  - type: dnf
+    install:
+      packages:
+        - keepassxc
