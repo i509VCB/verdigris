@@ -15,6 +15,11 @@ modules:
   - from-file: common/kde.yml
   - from-file: common/firefox-policy.yml
   - from-file: common/auth.yml
+  # This is a server. Enable the watchdog to reset if it becomes unresponsive.
+  - type: files
+    files:
+      - source: system/etc/systemd/system.conf.d/99-watchdog-tv-nas.conf
+        destination: /etc/systemd/system.conf.d/99-watchdog.conf
   - type: os-release
     properties:
       ID: verdigris-tv-nas
